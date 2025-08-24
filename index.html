@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. Yarub Group - Premier Dental & Medical Care in Dubai</title>
+    <meta name="description" content="Dr. Yarub Group offers exceptional dental and medical services in Dubai with two locations: Bella Dent Dental Center and HMRT Medical Polyclinic.">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+        <div class="loader">
+            <div class="tooth-icon"></div>
+            <p>Loading...</p>
+        </div>
+    </div>
+
+    <!-- Accessibility Skip Link -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Header -->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <div class="nav__brand">
+                <img src="https://dryarubgrp.com/wp-content/uploads/2024/01/yarub-1024x1024.png" alt="Dr. Yarub Group Logo" class="nav__logo">
+                <div class="nav__brand-text">
+                    <h1 class="nav__title">Dr. Yarub Group</h1>
+                    <p class="nav__subtitle">Medical Center</p>
+                </div>
+            </div>
+
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="#home" class="nav__link active">Home</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#about" class="nav__link">About</a>
+                    </li>
+                    <li class="nav__item dropdown">
+                        <a href="#services" class="nav__link">Services</a>
+                        <ul class="dropdown__menu">
+                            <li><a href="#dental-services">Dental Services</a></li>
+                            <li><a href="#medical-services">Medical Services</a></li>
+                            <li><a href="#cosmetic-services">Cosmetic Services</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav__item dropdown">
+                        <a href="#doctors" class="nav__link">Our Doctors</a>
+                        <ul class="dropdown__menu">
+                            <li><a href="#dr-yarub">Dr. Yarub Al Shammary</a></li>
+                            <li><a href="#dr-mays">Dr. Mays Aljbori</a></li>
+                            <li><a href="#dr-khaled">Dr. Khaled Shbair</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#locations" class="nav__link">Locations</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#patient-portal" class="nav__link">Patient Portal</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#contact" class="nav__link">Contact</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="nav__actions">
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
+                    <span class="theme-toggle__icon">🌙</span>
+                </button>
+                <button class="language-toggle" id="language-toggle">
+                    <span class="language-toggle__text">عربي</span>
+                </button>
+                <button class="nav__emergency-btn" onclick="window.open('tel:+971585881325', '_self')">
+                    Emergency
+                </button>
+                <button class="nav__book-btn" onclick="openBookingModal()">
+                    Book Now
+                </button>
+                <button class="nav__toggle" id="nav-toggle" aria-label="Toggle navigation menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- Hero Section -->
+        <section class="hero" id="home">
+            <div class="hero__container container">
+                <div class="hero__content">
+                    <div class="hero__text">
+                        <span class="hero__subtitle">Your Oral Health Matters to Us</span>
+                        <h1 class="hero__title">
+                            We are a Private Dental Center at the 
+                            <span class="hero__highlight">Heart of the Dubai Community</span>
+                        </h1>
+                        <p class="hero__description">
+                            Experience world-class dental and medical care with our team of highly qualified specialists. 
+                            We've been serving the Dubai community since 2006 with modern equipment and compassionate care.
+                        </p>
+                        <div class="hero__actions">
+                            <button class="btn btn--primary" onclick="openBookingModal()">
+                                Book Appointment
+                            </button>
+                            <button class="btn btn--secondary" onclick="openVirtualConsultation()">
+                                Virtual Consultation
+                            </button>
+                        </div>
+                        <div class="hero__stats">
+                            <div class="stat">
+                                <span class="stat__number">18+</span>
+                                <span class="stat__label">Years Experience</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat__number">10,000+</span>
+                                <span class="stat__label">Happy Patients</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat__number">50+</span>
+                                <span class="stat__label">Insurance Partners</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hero__image">
+                        <img src="https://dryarubgrp.com/wp-content/uploads/2024/01/home-about.jpg" alt="Modern dental clinic interior" class="hero__img">
+                        <div class="hero__floating-card">
+                            <div class="floating-card">
+                                <div class="floating-card__icon">⭐</div>
+                                <div class="floating-card__content">
+                                    <span class="floating-card__title">4.9/5 Rating</span>
+                                    <span class="floating-card__subtitle">1,200+ Reviews</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quick Booking Section -->
+        <section class="quick-booking">
+            <div class="container">
+                <div class="quick-booking__grid">
+                    <div class="location-card">
+                        <div class="location-card__header">
+                            <h3>Bella Dent Dental Center</h3>
+                            <div class="location-card__status">
+                                <span class="status-indicator status-indicator--open"></span>
+                                <span>Open Now</span>
+                            </div>
+                        </div>
+                        <div class="location-card__info">
+                            <p class="location-card__address">Sheikh Zayed Road Al Safa 1 Matloob Building 207, Dubai</p>
+                            <div class="location-card__contact">
+                                <a href="tel:045911595" class="contact-link">
+                                    📞 045911595
+                                </a>
+                                <a href="https://wa.me/971585881325" class="contact-link whatsapp-link" target="_blank">
+                                    💬 WhatsApp
+                                </a>
+                            </div>
+                        </div>
+                        <div class="location-card__actions">
+                            <button class="btn btn--outline" onclick="openBookingModal('belladent')">Book Appointment</button>
+                            <button class="btn btn--text" onclick="openDirections('belladent')">Get Directions</button>
+                        </div>
+                        <div class="location-card__qr">
+                            <img src="https://dryarubgrp.com/wp-content/uploads/2024/01/bella-qr-code.png" alt="Bella Dent QR Code" class="qr-code">
+                        </div>
+                    </div>
+
+                    <div class="location-card">
+                        <div class="location-card__header">
+                            <h3>HMRT Medical Polyclinic</h3>
+                            <div class="location-card__status">
+                                <span class="status-indicator status-indicator--open"></span>
+                                <span>Open Now</span>
+                            </div>
+                        </div>
+                        <div class="location-card__info">
+                            <p class="location-card__address">Al Nahda 1 Mai tower 1107, Dubai</p>
+                            <div class="location-card__contact">
+                                <a href="tel:042655888" class="contact-link">
+                                    📞 042655888
+                                </a>
+                                <a href="https://wa.me/971567790202" class="contact-link whatsapp-link" target="_blank">
+                                    💬 WhatsApp
+                                </a>
+                            </div>
+                        </div>
+                        <div class="location-card__actions">
+                            <button class="btn btn--outline" onclick="openBookingModal('hmrt')">Book Appointment</button>
+                            <button class="btn btn--text" onclick="openDirections('hmrt')">Get Directions</button>
+                        </div>
+                        <div class="location-card__qr">
+                            <img src="https://dryarubgrp.com/wp-content/uploads/2024/01/hmrt-qr-code.png" alt="HMRT QR Code" class="qr-code">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="payment-info">
+                    <div class="payment-info__content">
+                        <h4>Payment Options</h4>
+                        <div class="payment-options">
+                            <div class="payment-option">
+                                <span class="payment-icon">🏥</span>
+                                <span>Most Insurance Companies</span>
+                            </div>
+                            <div class="payment-option">
+                                <span class="payment-icon">🏦</span>
+                                <span>Bank Installments</span>
+                            </div>
+                            <div class="payment-option">
+                                <span class="payment-icon">💳</span>
+                                <span>Tabby & Toothpick</span>
+                            </div>
+                        </div>
+                        <div class="tabby-logo">
+                            <img src="https://dryarubgrp.com/wp-content/uploads/2024/01/tabby-logo-final.png" alt="Tabby Payment" class="tabby-img">
+                            <span>We Accept Tabby Payments</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Awards Section -->
+        <section class="awards">
+            <div class="container">
+                <div class="awards__grid">
+                    <div class="award-card">
+                        <img src="https://dryarubgrp.com/wp-content/uploads/2024/01/award-2.jpg" alt="Healthcare Professional Award 2022" class="award-img">
+                        <div class="award-info">
+                            <h4>Healthcare Professional</h4>
+                            <p>Patient Voice Awards 2022</p>
+                        </div>
+                    </div>
+                    <div class="award-card">
+                        <img src="https://dryarubgrp.com/wp-content/uploads/2024/01/award-1-new.png" alt="Patient Voice Awards 2023" class="award-img">
+                        <div class="award-info">
+                            <h4>Patient Voice Awards</h4>
+                            <p>Excellence in Healthcare 2023</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="about" id="about">
+            <div class="container">
+                <div class="about__content">
+                    <div class="about__text">
+                        <span class="section-subtitle">About Us</span>
+                        <h2 class="section-title">Dr. Yarub Group</h2>
+                        <p class="about__description">
+                            Dr. Yarub Group includes Belladent dental centre in Sheikh Zayed road, Al Safa1, Matloob building, 
+                            block F office no.207 and HMRT polyclinic In Al Nahda1, Baghdad street, Mai Tower, office no.1107.
+                        </p>
+                        <p class="about__description">
+                            Both the clinics are deeply committed to the highest standards of excellence in Dental, Medical, 
+                            and Surgical health care services supported by modern and advanced equipment and a panel of highly 
+                            qualified physicians and nursing staff provided dental and medical services since January 2006 for 
+                            thousands of people and tens of insurance companies all around UAE.
+                        </p>
+                        <div class="about__features">
+                            <div class="feature">
+                                <div class="feature__icon">🏆</div>
+                                <div class="feature__content">
+                                    <h4>Award-Winning Care</h4>
+                                    <p>Recognized for excellence in patient care and service quality</p>
+                                </div>
+                            </div>
+                            <div class="feature">
+                                <div class="feature__icon">🔬</div>
+                                <div class="feature__content">
+                                    <h4>Advanced Technology</h4>
+                                    <p>State-of-the-art equipment and modern treatment methods</p>
+                                </div>
+                            </div>
+                            <div class="feature">
+                                <div class="feature__icon">👨‍⚕️</div>
+                                <div class="feature__content">
+                                    <h4>Expert Team</h4>
+                                    <p>Highly qualified physicians and specialized nursing staff</p>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="btn btn--primary" onclick="scrollToSection('doctors')">Meet Our Doctors</button>
+                    </div>
+                    <div class="about__media">
+                        <div class="about__image">
+                            <img src="https://dryarubgrp.com/wp-content/uploads/2024/01/Dr.-Yaroub-home-about.jpg" alt="Dr. Yarub Al Shammary" class="about__img">
+                        </div>
+                        <div class="about__video">
+                            <div class="video-placeholder" onclick="playVideo('clinic-tour')">
+                                <img src="https://dryarubgrp.com/wp-content/uploads/2024/01/home-banner.png" alt="Clinic Tour Video" class="video-thumbnail">
+                                <div class="play-button">
+                                    <span class="play-icon">▶</span>
+                                </div>
+                                <div class="video-info">
+                                    <h4>Virtual Clinic Tour</h4>
+                                    <p>Take a look inside our modern facilities</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Doctors Section -->
+        <section class="doctors" id="doctors">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle">Our Expert Team</span>
+                    <h2 class="section-title">Meet Our Doctors</h2>
+                    <p class="section-description">
+                        Our team of highly qualified specialists brings years of experience and expertise to provide 
+                        you with the best possible care.
+                    </p>
+                </div>
+
+                <div class="doctors__grid">
+                    <div class="doctor-card" data-doctor="yarub">
+                        <div class="doctor-card__image">
+                            <img src="https://dryarubgrp.com/wp-content/uploads/2024/01/yarub-1024x1024.png" alt="Dr. Yarub Al Shammary" class="doctor-img">
+                            <div class="doctor-card__overlay">
+                                <button class="btn btn--white" onclick="openDoctorProfile('yarub')">View Profile</button>
+                                <button class="btn btn--outline-white" onclick="bookWithDoctor('yarub')">Book Appointment</button>
+                            </div>
+                        </div>
+                        <div class="doctor-card__content">
+                            <h3 class="doctor-card__name">Dr. Yarub Al Shammary</h3>
+                            <p class="doctor-card__specialty">Oral-Maxillofacial Surgeon</p>
+                            <div class="doctor-card__rating">
+                                <div class="rating">
+                                    <span class="star">⭐</span>
+                                    <span class="star">⭐</span>
+                                    <span class="star">⭐</span>
+                                    <span class="star">⭐</span>
+                                    <span class="star">⭐</span>
+                                    <span class="rating-text">(4.9/5)</span>
+                                </div>
+                            </div>
+                            <div class="doctor-card__info">
+                                <div class="info-item">
+                                    <span class="info-label">Experience:</span>
+                                    <span class="info-value">18+ Years</span>
+                                </div>
+                                <div class="info-item">
+                                    <span class="info-label">Languages:</span>
+                                    <span class="info-value">English, Arabic</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="doctor-card" data-doctor="mays">
+                        <div class="doctor-card__image">
+                            <img src="https://dryarubgrp.com/wp-content/uploads/2024/01/Dr-Mays-home-page-1024x1024.png" alt="Dr. Mays Aljbori" class="doctor-img">
+                            <div class="doctor-card__overlay">
+                                <button class="btn btn--white" onclick="openDoctorProfile('mays')">View Profile</button>
+                                <button class="btn btn--outline-white" onclick="bookWithDoctor('mays')">Book Appointment</button>
+                            </div>
+                        </div>
+                        <div class="doctor-card__content">
+                            <h3 class="doctor-card__name">Dr. Mays Aljbori</h3>
+                            <p class="doctor-card__specialty">General & Cosmetic Dentist (DDS)</p>
+                            <div class="doctor-card__rating">
+                                <div class="rating">
+                                    <span class="star">⭐</span>
+                                    <span class="star">⭐</span>
+                                    <span class="star">⭐</span>
+                                    <span class="star">⭐</span>
+                                    <span class="star">⭐</span>
+                                    <span class="rating-text">(4.8/5)</span>
+                                </div>
+                            </div>
+                            <div class="doctor-card__info">
+                                <div class="info-item">
+                                    <span class="info-label">Experience:</span>
+                                    <span class="info-value">12+ Years</span>
+                                </div>
+                                <div class="info-item">
+                                    <span class="info-label">Languages:</span>
+                                    <span class="info-value">English, Arabic</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="doctor-card" data-doctor="khaled">
+                        <div class="doctor-card__image">
+                            <img src="https://dryarubgrp.com/wp-content/uploads/2024/01/khalid-1024x1024.png" alt="Dr. Khaled Shbair" class="doctor-img">
+                            <div class="doctor-card__overlay">
+                                <button class="btn btn--white" onclick="openDoctorProfile('khaled')">View Profile</button>
+                                <button class="btn btn--outline-white" onclick="bookWithDoctor('khaled')">Book Appointment</button>
+                            </div>
+                        </div>
+                        <div class="doctor-card__content">
+                            <h3 class="doctor-card__name">Dr. Khaled Shbair</h3>
+                            <p class="doctor-card__specialty">General Dentist</p>
+                            <div class="doctor-card__rating">
+                                <div class="rating">
+                                    <span class="star">⭐</span>
+                                    <span class="star">⭐</span>
+                                    <span class="star">⭐</span>
+                                    <span class="star">⭐</span>
+                                    <span class="star">⭐</span>
+                                    <span class="rating-text">(4.9/5)</span>
+                                </div>
+                            </div>
+                            <div class="doctor-card__info">
+                                <div class="info-item">
+                                    <span class="info-label">Experience:</span>
+                                    <span class="info-value">10+ Years</span>
+                                </div>
+                                <div class="info-item">
+                                    <span class="info-label">Languages:</span>
+                                    <span class="info-value">English, Arabic</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="doctor-card" data-doctor="abeer">
+                        <div class="doctor-card__image">
+                            <img src="https://dryarubgrp.com/wp-content/uploads/2024/01/Dr-Abeer.png" alt="Dr Abeer Awni" class="doctor-img">
+                            <div class="doctor-card__overlay">
+                                <button class="btn btn--white" onclick="openDoctorProfile('abeer')">View Profile</button>
+                                <button class="btn btn--outline-white" onclick="bookWithDoctor('abeer')">Book Appointment</button>
+                            </div>
+                        </div>
+                        <div class="doctor-card__content">
+                            <h3 class="doctor-card__name">Dr Abeer Awni</h3>
+                            <p class="doctor-card__specialty">General Dentist (DDS)</p>
+                            <div class="doctor-card__rating">
+                                <div class="rating">
+                                    <span class="star">⭐</span>
+                                    <span class="star">⭐</span>
+                                    <span class="star">⭐</span>
+                                    <span class="star">⭐</span>
+                                    <span class="star">⭐</span>
+                                    <span class="rating-text">(4.7/5)</span>
+                                </div>
+                            </div>
+                            <div class="doctor-card__info">
+                                <div class="info-item">
+                                    <span class="info-label">Experience:</span>
+                                    <span class="info-value">8+ Years</span>
+                                </div>
+                                <div class="info-item">
+                                    <span class="info-label">Languages:</span>
+                                    <span class="info-value">English, Arabic</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="doctor-card" data-doctor="kamil">
+                        <div class="doctor-card__image">
+                            <img src="https://dryarubgrp.com/wp-content/uploads/2024/01/dr-kamil.png" alt="Dr.Kamil Kak Mohiddina" class="doctor-img">
+                            <div class="doctor-card__overlay">
+                                <button class="btn btn--white" onclick="openDoctorProfile('kamil')">View Profile</button>
+                                <button class="btn btn--outline-white" onclick="bookWithDoctor('kamil')">Book Appointment</button>
+                            </div>
+                        </div>
+                        <div class="doctor-card__content">
+                            <h3 class="doctor-card__name">Dr.Kamil Kak Mohiddina</h3>
+                            <p class="doctor-card__specialty">Orthodontics & Dento facial</p>
+                            <div class="doctor-card__rating">
+                                <div class="rating">
+                                    <span class="star">⭐</span>
+                                    <span class="star">⭐</span>
+                                    <span class="star">⭐</span>
+                                    <span class="star">⭐</span>
+                                    <span class="star">⭐</span>
+                                    <span class="rating-text">(4.8/5)</span>
+                                </div>
+                            </div>
+                            <div class="doctor-card__info">
+                                <div class="info-item">
+                                    <span class="info-label">Experience:</span>
+                                    <span class="info-value">15+ Years</span>
+                                </div>
+                                <div class="info-item">
+                                    <span class="info-label">Languages:</span>
+                                    <span class="info-value">English, Arabic, Kurdish</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="doctor-card" data-doctor="mustafa">
+                        <div class="doctor-card__image">
+                            <img src="https://dryarubgrp.com/wp-content/uploads/2024/03/DR-MUSTAFA-1024x1024.jpg" alt="Dr Mustafa Dogramaci" class="doctor-img">
+                            <div class="doctor-card__overlay">
+                                <button class="btn btn--white" onclick="openDoctorProfile('mustafa')">View Profile</button>
+                                <button class="btn btn--outline-white" onclick="bookWithDoctor('mustafa')">Book Appointment</button>
+                            </div>
+                        </div>
+                        <div class="doctor-card__content">
+                            <h3 class="doctor-card__name">Dr Mustafa Dogramaci</h3>
+                            <p class="doctor-card__specialty">General Dentist – Implantologist</p>
+                            <div class="doctor-card__rating">
+                                <div class="rating">
+                                    <span class="star">⭐</span>
+                                    <span class="star">⭐</span>
+                                    <span class="star">⭐</span>
+                                    <span class="star">⭐</span>
+                                    <span class="star">⭐</span>
+                                    <span class="rating-text">(4.9/5)</span>
+                                </div>
+                            </div>
+                            <div class="doctor-card__info">
+                                <div class="info-item">
+                                    <span class="info-label">Experience:</span>
+                                    <span class="info-value">14+ Years</span>
+                                </div>
+                                <div class="info-item">
+                                    <span class="info-label">Languages:</span>
+                                    <span class="info-value">English, Arabic, Turkish</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta">
+            <div class="container">
+                <div class="cta__content">
+                    <h2 class="cta__title">Transform your smile with precision and care!</h2>
+                    <p class="cta__subtitle">Your radiant smile begins with us!</p>
+                    <p class="cta__description">
+                        Schedule your appointment today for professional services that prioritize your oral health and radiate confidence.
+                    </p>
+                    <div class="cta__actions">
+                        <a href="tel:+971585881325" class="cta__phone">
+                            <span class="cta__phone-label">Bella Dent Dental Clinic</span>
+                            <span class="cta__phone-number">Call +971 58 5881 325</span>
+                        </a>
+                        <a href="tel:+971585756393" class="cta__phone">
+                            <span class="cta__phone-label">HMRT Medical Polyclinic</span>
+                            <span class="cta__phone-number">Call +971 58 5756 393</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section class="services" id="services">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle">Our Procedures</span>
+                    <h2 class="section-title">Comprehensive Dental & Medical Services</h2>
+                    <p class="section-description">
+                        Bella Dent Dental Center is distinguished by its various dental and cosmetic services 
+                        that cater to all our valued patients of all ages
+                    </p>
+                </div>
+
+                <div class="services__grid">
+                    <div class="service-card" data-service="veneers">
+                        <div class="service-card__image">
+                            <img src="https://dryarubgrp.com/wp-content/uploads/2024/01/Dental-Veneers-1.png" alt="Dental Veneers" class="service-img">
+                        </div>
+                        <div class="service-card__content">
+                            <h3 class="service-card__title">Dental Veneers</h3>
+                            <p class="service-card__description">
+                                Dental Veneers are tooth-colored thin custom-made shells which are designed to cover 
+                                the front surface of teeth. The veneers can help to change color, shape, size.
+                            </p>
+                            <div class="service-card__details">
+                                <div class="service-detail">
+                                    <span class="detail-label">Duration:</span>
+                                    <span class="detail-value">2-3 visits</span>
+                                </div>
+                                <div class="service-detail">
+                                    <span class="detail-label">Starting from:</span>
+                                    <span class="detail-value
